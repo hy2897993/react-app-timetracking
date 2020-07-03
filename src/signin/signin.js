@@ -54,7 +54,7 @@ class SigninComponent extends React.Component {
                     <Typography component='h5' variant='h6' className={classes.noAccountHeader} >Don't have a account yet</Typography>
                     
                         <Link className={classes.signUpLink} to='/signup'>Sign Up</Link>
-                        <Link className={classes.cancleLink} to='/welcome'>Cancle</Link>
+                        <Link className={classes.cancleLink} to='/'>Cancle</Link>
                     
                 </Paper>
 

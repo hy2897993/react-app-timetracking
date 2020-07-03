@@ -69,7 +69,7 @@ class SignupComponent extends React.Component {
                     <Typography  component='h5' variant='h6' className={classes.noAccountHeader}>Already have an account?</Typography>
                     <div style={{display:'flex',justifyContent:'space-between'}}>
                         <Link className={classes.logInLink} to='/signin'>Sign In</Link>
-                        <Link className={classes.cancleLink} to='/welcome'>Cancle</Link>
+                        <Link className={classes.cancleLink} to='/'>Cancle</Link>
                     </div>
                 </form>
             </Paper>
