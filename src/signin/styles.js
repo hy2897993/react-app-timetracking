@@ -1,6 +1,6 @@
 const styles = theme => ({
     img:{
-      backgroundImage: `url('/road.jpg')`,
+      backgroundImage:`url('https://raw.githubusercontent.com/hy2897993/react-app-timetracking/gh-pages/road.jpg')`,
       backgroundSize:'cover',
       backgroundPosition:'center',
       width:'100%',
