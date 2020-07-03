@@ -1,0 +1,18 @@
+.input{
+    border:3px solid #ae7000
+}
+
+/* 
+text-enter{}
+text-enter-active{}
+text-enter-done{}
+text-exit{}
+text-exit-active{}
+text-exit-done{} */
+
+.animation-enter{ opacity:0;}
+.animation-enter-active{opacity:1; transition: opacity 1000ms;}
+.animation-enter-done{ opacity:1;}
+.animation-exit{opacity:1}
+.animation-exit-active{opacity:0; transition: opacity 1000ms;}
+.animation-exit-done{opacity:0;}
