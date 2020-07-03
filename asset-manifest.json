@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/react-app-timetracking/static/js/main.08a6034e.chunk.js",
-    "main.js.map": "/react-app-timetracking/static/js/main.08a6034e.chunk.js.map",
+    "main.js": "/react-app-timetracking/static/js/main.76ce7dd8.chunk.js",
+    "main.js.map": "/react-app-timetracking/static/js/main.76ce7dd8.chunk.js.map",
     "runtime-main.js": "/react-app-timetracking/static/js/runtime-main.2517e15d.js",
     "runtime-main.js.map": "/react-app-timetracking/static/js/runtime-main.2517e15d.js.map",
     "static/js/2.c661ead0.chunk.js": "/react-app-timetracking/static/js/2.c661ead0.chunk.js",
     "static/js/2.c661ead0.chunk.js.map": "/react-app-timetracking/static/js/2.c661ead0.chunk.js.map",
     "index.html": "/react-app-timetracking/index.html",
-    "precache-manifest.63520ac13d6f3adfb9fd767f7f723d63.js": "/react-app-timetracking/precache-manifest.63520ac13d6f3adfb9fd767f7f723d63.js",
+    "precache-manifest.2c7040b99752669bb186c99519154c22.js": "/react-app-timetracking/precache-manifest.2c7040b99752669bb186c99519154c22.js",
     "service-worker.js": "/react-app-timetracking/service-worker.js",
     "static/js/2.c661ead0.chunk.js.LICENSE": "/react-app-timetracking/static/js/2.c661ead0.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.2517e15d.js",
     "static/js/2.c661ead0.chunk.js",
-    "static/js/main.08a6034e.chunk.js"
+    "static/js/main.76ce7dd8.chunk.js"
   ]
 }

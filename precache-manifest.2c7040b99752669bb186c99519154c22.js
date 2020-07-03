@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "da5f00df28ada193b927955e22e4e15a",
+    "revision": "9c86a2faae5928e6804fa38baf604d69",
     "url": "/react-app-timetracking/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-app-timetracking/static/js/2.c661ead0.chunk.js.LICENSE"
   },
   {
-    "revision": "37b04bafe055d2b8d39a",
-    "url": "/react-app-timetracking/static/js/main.08a6034e.chunk.js"
+    "revision": "a69aad3433f408eda87a",
+    "url": "/react-app-timetracking/static/js/main.76ce7dd8.chunk.js"
   },
   {
     "revision": "e6d632f30b5fb14e926d",
