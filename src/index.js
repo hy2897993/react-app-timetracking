@@ -23,7 +23,7 @@ firebase.initializeApp({
 })
 
 const routing=(
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
         <div id='routing-container'>
             <Route exact  path='/' component={WelcomeComponent} ></Route>
             <Route path='/signin' component={SigninComponent} ></Route>
@@ -34,5 +34,9 @@ const routing=(
 )
 
 ReactDOM.render(routing,document.getElementById('root'))
-
+// ReactDOM.render((
+//     <BrowserRouter basename={process.env.PUBLIC_URL}>
+//       <App />
+//     </BrowserRouter>
+//  ), ...)  
 serviceworker.unregister()

@@ -78,7 +78,7 @@ class FunctionViewComponent extends React.Component {
                 })
             }
             <Paper className={classes.addNewPaper}>
-                <p >Add New Project</p>
+                <p>Add New Project</p>
                 <AddIcon className={classes.addIcon} onClick={this.newHour} color='primary'/>
             </Paper>
             </div>
@@ -96,9 +96,10 @@ class FunctionViewComponent extends React.Component {
                     <h2>Can You Achieve Anything With Enough Practice?</h2>
                     <br />
                     
-                    <p>Deliberate practice does not mean that you can fashion yourself into anything with enough work and effort, though. While human beings do possess a remarkable ability to develop their skills, there are limits to how far any individual can go. Your genes set a boundary around what is possible.
-                    <br /><br />
-                    However, while genetics influence performance, they do not determine performance. Do not confuse destiny with opportunity. Genes provide opportunity. They do not determine our destiny. It’s similar to a game of cards. You have a better opportunity if you are dealt a better hand, but you also need to play the hand well to win.</p>
+                    <p>Deliberate practice does not mean that you can fashion yourself into anything with enough work and effort, though. While human beings do possess a remarkable ability to develop their skills, there are limits to how far any individual can go. Your genes set a boundary around what is possible.</p>
+                    <br />
+                    <br />
+                    <p>However, while genetics influence performance, they do not determine performance. Do not confuse destiny with opportunity. Genes provide opportunity. They do not determine our destiny. It’s similar to a game of cards. You have a better opportunity if you are dealt a better hand, but you also need to play the hand well to win.</p>
                 </Paper>
             </div>
         </main> )}

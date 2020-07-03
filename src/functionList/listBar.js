@@ -61,7 +61,7 @@ class ListBarComponent extends React.Component {
                                     <ListItem 
                                     className={index===this.props.functionListIndex?classes.listItem:classes.listItem1}
                                     alignItems='flex-start'
-                                    contextmenu="mymenu">
+                                    contextMenu="mymenu">
 
                                         <ListItemText
                                         primary={

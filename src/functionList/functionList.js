@@ -66,7 +66,7 @@ class FunctionListComponent extends React.Component {
                                     alignItems='flex-start'
                                     
                                     
-                                    contextmenu="mymenu">
+                                    contextMenu="mymenu">
                                         
                                      {/* <ContextMenu
                                         menu={

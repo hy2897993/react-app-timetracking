@@ -1,7 +1,7 @@
 import React from 'react';
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
+// import firebase from 'firebase/app';
+// import 'firebase/auth';
+// import 'firebase/firestore';
 import styles from './styles'
 import { withStyles} from '@material-ui/core'
 // import ExitToAppIcon from '@material-ui/icons/ExitToApp'
@@ -13,8 +13,9 @@ import NewHourComponent from '../newHourBox/newHourBox'
 
 
 
-// const firebase = require("firebase");
-
+const firebase = require("firebase");
+require('firebase/auth');
+require('firebase/firestore');
 
 class DashboardComponent extends React.Component {
     constructor(){
