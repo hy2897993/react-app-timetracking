@@ -66,7 +66,7 @@ class ListBarComponent extends React.Component {
                                         <ListItemText
                                         primary={
                                             <Avatar alt='Remy Sharp' className={classes.avatar}>
-                                                {data.item}
+                                                {data.item.charAt(0)}
                                             </Avatar>
                                         }
                                             

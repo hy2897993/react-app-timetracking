@@ -10,6 +10,7 @@ import WelcomeComponent from './welcome/welcome'
 
 const firebase = require('firebase')
 require('firebase/firestore')
+
 firebase.initializeApp({
     //it should be hidden
     apiKey: "AIzaSyAq8yXI2SEWNNuQFjbWEmSopl0LOC7chPI",

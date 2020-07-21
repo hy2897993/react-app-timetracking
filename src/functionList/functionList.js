@@ -95,7 +95,7 @@ class FunctionListComponent extends React.Component {
                                         <React.Fragment>
                                             <EditIcon onClick={()=>this.editTitle(index)} id={'editZone'+index} className={classes.editIcon}/>
                                             <Typography style={{fontFamily: `Quicksand`, color:'white'}} component="span" color="textSecondary">
-                                                Current: {data.time} hour
+                                                Current: {data.time.toFixed(2)} hour
                                             </Typography ><br />
                                             <DeleteIcon onClick={(e)=>this.deleteProject(data,e,index)} id={'deleteZone'+index} className={classes.deleteIcon}/><Typography style={{fontFamily: `Quicksand`, color:'white'}} component="span" color="textPrimary">
                                                 Goal: {data.hourGoal} hour

@@ -65,7 +65,7 @@ class FunctionViewComponent extends React.Component {
                                 <div>
                                     
                                     <Typography style={{fontFamily: `Quicksand`}} component="span" color="textPrimary">
-                                        Current: {data.time} hour
+                                        Current: {data.time.toFixed(2)} hour
                                     </Typography><br />
                                     
                                     <Typography style={{fontFamily: `Quicksand`}} component="span" color="textPrimary">

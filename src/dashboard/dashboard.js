@@ -36,7 +36,7 @@ class DashboardComponent extends React.Component {
             displayIndex:'',
             disabled:false,
             zone2Bottom:'',
-            openDrawer:false,
+            openDrawer:true,
             functionListIndex:'',
             chartData:'',
         }
@@ -341,11 +341,11 @@ class DashboardComponent extends React.Component {
                 datasets: [{
                     label: 'Daily time (h)',
                     data: this.state.lists[index].hourStack===undefined? null:this.state.lists[index].hourStack.hour,
-                    backgroundColor: [
-                        'rgba(54, 162, 235, 0.2)',],
-                    borderColor: [
+                    backgroundColor: 
+                        'rgba(54, 162, 235, 0.2)',
+                    borderColor: 
                         'rgba(255, 99, 132, 1)',
-                    ],
+                    
                 }]
             }
         })
