@@ -19,6 +19,7 @@ const styles = theme => ({
       margin:'10px',
       width: theme.spacing(5),
       height: theme.spacing(5),
+      backgroundColor:"#f542c5"
     },
     arrowLeftIcon:{
       margin:'10px',

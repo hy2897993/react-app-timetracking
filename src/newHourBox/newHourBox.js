@@ -87,7 +87,7 @@ class NewHourComponent extends React.Component {
       submitNewHour=(e,item,hourGoal)=>{
         e.preventDefault()
  
-         console.log('create new hour')
+        //  console.log('create new hour')
          this.props.submitNewHourFn(e,this.state.item,this.state.hourGoal,null,true)
         
     

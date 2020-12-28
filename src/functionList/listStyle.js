@@ -27,11 +27,12 @@ const styles = theme => ({
         margin:'10px',
         width: theme.spacing(5),
         height: theme.spacing(5),
+        backgroundColor:"#f542c5"
       },
       newChatBtn: {
         margin:'10px',
         width: theme.spacing(5),
-        height: theme.spacing(5),
+        height: theme.spacing(5)
       },
       listItem: {
         cursor: 'pointer',

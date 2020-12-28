@@ -37,7 +37,7 @@ class ListBarComponent extends React.Component {
                 <div className={classes.subroot}>
                 <ArrowRightIcon id='unfold' className={classes.arrowRightIcon} color='primary' onClick={this.props.toggleFunctionList}/>
                 <Avatar alt='Remy Sharp' className={classes.avatar}>
-                    {this.props.f_name}
+                {this.props.name?(this.props.name).split("")[0]:null}
                 </Avatar>
 
                 <AddCircleIcon variant="contained" 
@@ -183,11 +183,11 @@ class ListBarComponent extends React.Component {
 
         const X = e.pageX;
         const Y = e.pageY;
-        console.log(X+' '+Y)
+        // console.log(X+' '+Y)
         
         if(X<clickRight&&((Y<zone1Bottom&&Y>toptopBottom)||(Y<zone2Bottom&&Y>zone2Top))){
             this.props.unselectItem()
-            console.log('unselect')
+            // console.log('unselect')
             this.props.cancleFunctionListIndex()
         }
     }

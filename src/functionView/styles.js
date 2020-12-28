@@ -112,6 +112,7 @@ const styles = theme => ({
     height: 'auto',
     padding:theme.spacing(2),
     border:'1px solid grey',
+    fontFamily: "Quicksand",
   },
   addIcon:{
     width: theme.spacing(10),
@@ -157,7 +158,7 @@ const styles = theme => ({
     // height: '50px',
     // background: '#6a85b6',
     // color:'#6a85b6',
-    fontFamily: `Quicksand`,
+    fontFamily: `Cabin`,
     position:'absolute',
     fontSize: '28px',
     top:'50px',
@@ -178,6 +179,7 @@ const styles = theme => ({
   },
 
   startBtn: {
+    fontFamily:'Cabin',
     display:'flex',
     justifyContent: 'space-around',
     textAlign:'center',
@@ -203,7 +205,8 @@ const styles = theme => ({
   
     rate: {
       position:'fixed',
-      left:'50%',
+      margin:'auto',
+      left:'55%',
       top:'50%',
       transform: 'translate(-50%,-50%)',
       background: 'rgba(255, 255, 255,1)',
@@ -251,9 +254,10 @@ const styles = theme => ({
       width:'60%',
     },
     img:{
+      width: "82px",
       transform: 'translateX(-41px)',
       position:'relative',
-      mixBlendMode: 'multiply',
+      mixBlendMode: 'normal',
     },
     chart:{
       width:'60%',

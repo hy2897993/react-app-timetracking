@@ -35,7 +35,7 @@ class FunctionListComponent extends React.Component {
                 
                 <div style={{display:'flex',justifyContent:'space-between'}}>
                 <Avatar alt='Remy Sharp' className={classes.avatar}>
-                    {this.props.f_name}
+                    {this.props.name?(this.props.name).split("")[0]:null}
                 </Avatar>
 
                 <ArrowLeftIcon className={classes.arrowLeftIcon} onClick={this.props.toggleFunctionList}/>
@@ -206,7 +206,7 @@ class FunctionListComponent extends React.Component {
     clickItemIndex=(index,e)=>{
         const X = e.pageX;
         const Y = e.pageY;
-        console.log(`editZone${index}`)
+        // console.log(`editZone${index}`)
         const editZone = document.getElementById(`editZone${index}`)
         const editZoneL = editZone.getBoundingClientRect().left
         const editZoneR = editZone.getBoundingClientRect().right
@@ -263,11 +263,11 @@ class FunctionListComponent extends React.Component {
 
         const X = e.pageX;
         const Y = e.pageY;
-        console.log(X+' '+Y)
+        // console.log(X+' '+Y)
         
         if(X<clickRight&&(Y<zone1Bottom||(Y<zone2Bottom&&Y>zone2Top))){
             this.props.unselectItem()
-            console.log('unselect')
+            // console.log('unselect')
             this.props.cancleFunctionListIndex()
 
         }

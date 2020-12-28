@@ -44,8 +44,8 @@ const styles = theme => ({
       padding: `${theme.spacing(2)}px ${theme.spacing(3)}px ${theme.spacing(3)}px`,
       position: 'absolute',
       width: '350px',
-      top: '50px',
-      left: 'calc(50% + 150px - 175px)'
+      top: 'calc(50% - 175px)',
+      left: 'calc(50% - 175px)'
     },
     input: {
     },

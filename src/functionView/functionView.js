@@ -44,7 +44,7 @@ class FunctionViewComponent extends React.Component {
             {value: 100,label: '100%',},
         ];
         
-        console.log(readySubmit)
+        // console.log(readySubmit)
         if(displayToggle===false){
         return ( 
         <main id='view-container' className={this.props.openDrawer?classes.content:classes.content_wider} >
@@ -86,20 +86,20 @@ class FunctionViewComponent extends React.Component {
             <div className={classes.lowerBoard}>
                 
                 <Paper elevation={0} className={classes.theoryPaper}>
-                    <h1>Deliberate Practice</h1>
-                    <br />
+                    {/* <h1>Deliberate Practice</h1>
+                    <br /> */}
                     <h2>What is Deliberate Practice?</h2>
                     <br />
-                    <p>Deliberate practice refers to a special type of practice that is purposeful and systematic. While regular practice might include mindless repetitions, deliberate practice requires focused attention and is conducted with the specific goal of improving performance.</p>
+                    <p style={{fontSize:'15px' }}>Deliberate practice refers to a special type of practice that is purposeful and systematic. While regular practice might include mindless repetitions, deliberate practice requires focused attention and is conducted with the specific goal of improving performance.</p>
                 </Paper>
                 <Paper elevation={0} className={classes.theoryPaper}>
                     <h2>Can You Achieve Anything With Enough Practice?</h2>
                     <br />
                     
-                    <p>Deliberate practice does not mean that you can fashion yourself into anything with enough work and effort, though. While human beings do possess a remarkable ability to develop their skills, there are limits to how far any individual can go. Your genes set a boundary around what is possible.</p>
+                    <p style={{fontSize:'15px' }}>Deliberate practice does not mean that you can fashion yourself into anything with enough work and effort, though. While human beings do possess a remarkable ability to develop their skills, there are limits to how far any individual can go. Your genes set a boundary around what is possible.</p>
                     <br />
                     <br />
-                    <p>However, while genetics influence performance, they do not determine performance. Do not confuse destiny with opportunity. Genes provide opportunity. They do not determine our destiny. It’s similar to a game of cards. You have a better opportunity if you are dealt a better hand, but you also need to play the hand well to win.</p>
+                    <p style={{fontSize:'15px' }}>However, while genetics influence performance, they do not determine performance. Do not confuse destiny with opportunity. Genes provide opportunity. They do not determine our destiny. It’s similar to a game of cards. You have a better opportunity if you are dealt a better hand, but you also need to play the hand well to win.</p>
                 </Paper>
             </div>
         </main> )}
@@ -167,7 +167,7 @@ class FunctionViewComponent extends React.Component {
                         
                         :
                         <div className={classes.onOffBtn}>
-                        <Button style={{fontFamily: `Quicksand`}} disabled={this.props.disable}
+                        <Button disabled={this.props.disable}
                         variant='contained' 
                         fullWidth 
                         className={classes.startBtn} 
@@ -177,7 +177,7 @@ class FunctionViewComponent extends React.Component {
                         </Button>
 
                         {displayIndex===displayViewIndex&&displayToggle?
-                        <Button style={{fontFamily: `Quicksand`}}
+                        <Button
                         variant='contained' 
                         fullWidth 
                         className={classes.startBtn} 
@@ -189,13 +189,13 @@ class FunctionViewComponent extends React.Component {
 
                     <div className={classes.linearBox}>
                         {displayIndex===displayViewIndex&&displayToggle?
-                        <img src='walking.gif' alt="walking"
+                        <img src='clock.gif' alt="clock"
                         className={classes.img} 
                         style={{left:`${this.props.trackingList[displayViewIndex]===undefined?null:100 * this.props.trackingList[displayViewIndex].time/this.props.trackingList[displayViewIndex].hourGoal}%`
                         }}/>
                         :
                         <img alt="191919" style={{left:`${this.props.trackingList[displayViewIndex]===undefined?null:100 * this.props.trackingList[displayViewIndex].time/this.props.trackingList[displayViewIndex].hourGoal}%`}}
-                         className={classes.img} src='19.jpg'/>}
+                         className={classes.img} src='clock.png'/>}
 
                         <LinearProgress variant="determinate" className={classes.linear} 
                         value={this.props.trackingList[displayViewIndex]===undefined?null:(this.props.trackingList[displayViewIndex].time>this.props.trackingList[displayViewIndex].hourGoal?100:100 * this.props.trackingList[displayViewIndex].time/this.props.trackingList[displayViewIndex].hourGoal)}/>
@@ -307,7 +307,7 @@ class FunctionViewComponent extends React.Component {
     };
     clickArrowBackIcon=()=>{
         this.props.unselectItem()
-        console.log('unselect')
+        // console.log('unselect')
         this.props.cancleFunctionListIndex()
     }
     newHour = () => {

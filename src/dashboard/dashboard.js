@@ -22,8 +22,7 @@ class DashboardComponent extends React.Component {
         super()
         this.state={
             email:null,
-            fname:null,
-            sname:null,
+            name:null,
             lists:[],
             timer:"00:00:00",
             selectedIndex:'',
@@ -49,8 +48,7 @@ class DashboardComponent extends React.Component {
             {this.state.openDrawer?
             <FunctionListComponent id='NewHourComponent' disabled={this.state.readyToSubmit}
             readySubmit={this.state.readyToSubmit}
-            f_name={this.state.fname} 
-            s_name={this.state.sname}
+            name={this.state.name}
             trackingList={this.state.lists}
             startTrackingFn={this.startTracking}
             stopTrackingFn={this.stopTracking}
@@ -75,8 +73,7 @@ class DashboardComponent extends React.Component {
             :
             <ListBarComponent id='NewHourComponent' disabled={this.state.readyToSubmit}
             readySubmit={this.state.readyToSubmit}
-            f_name={this.state.fname} 
-            s_name={this.state.sname}
+            name={this.state.name}
             trackingList={this.state.lists}
             startTrackingFn={this.startTracking}
             stopTrackingFn={this.stopTracking}
@@ -140,7 +137,6 @@ class DashboardComponent extends React.Component {
     
 
     componentDidMount = () =>{
-        console.log('mounted')
         firebase.auth().onAuthStateChanged(async _usr=>{
             if(!_usr){
                 this.props.history.push('/signin')
@@ -154,14 +150,10 @@ class DashboardComponent extends React.Component {
                     const profile = res.docs.map(_doc=>_doc.data())
                     await this.setState({
                         email:_usr.email,
-                        fname:profile[0].firstName,
-                        sname:profile[0].familyName,
+                        name:profile[0].userName,
                         lists:profile[0].lists,
                         
                     })
-                    console.log(this.state.lists)
-                    console.log(profile)
-
                 })
             }
         })
@@ -202,9 +194,9 @@ class DashboardComponent extends React.Component {
             var m = s%3600
             var min = Math.floor(m/60)
             var sec = m%60
-            console.log(
-               this.checkTime(h)+':'+this.checkTime(min)+':'+this.checkTime(sec)
-            )
+            // console.log(
+            //    this.checkTime(h)+':'+this.checkTime(min)+':'+this.checkTime(sec)
+            // )
             this.setState({timer:(this.checkTime(h)+':'+this.checkTime(min)+':'+this.checkTime(sec))})
             
         },1000)
@@ -217,7 +209,7 @@ class DashboardComponent extends React.Component {
             disabled:false
         })
         clearInterval(this.state.counting)
-        console.log(this.state.readyToSubmit)
+        // console.log(this.state.readyToSubmit)
         
     }    
      
@@ -233,8 +225,8 @@ class DashboardComponent extends React.Component {
         const d = new Date().toString()
         const date = d.split(" ")[1]+' '+d.split(" ")[2]
 
-        await console.log(lists1)
-        await console.log(this.state.selectedIndex)
+        // await console.log(lists1)
+        // await console.log(this.state.selectedIndex)
 
         if(lists1[this.state.selectedIndex].hourStack.time.includes(date)){
             const pos = lists1[this.state.selectedIndex].hourStack.time.indexOf(date)
@@ -251,9 +243,9 @@ class DashboardComponent extends React.Component {
         if(number>=lists1[this.state.selectedIndex].hourGoal){
             alert('You have reached the GOAL!!')
         }
-        console.log(hour)
+        // console.log(hour)
         
-        console.log(number)
+        // console.log(number)
 
 
         const docKey = this.state.email
@@ -309,7 +301,7 @@ class DashboardComponent extends React.Component {
     
 
     editTitle=async(index)=>{
-        console.log(index)
+        // console.log(index)
         this.setState({
             edit:true,
             editIndex:index
@@ -331,7 +323,7 @@ class DashboardComponent extends React.Component {
         })
     }
     clickItem=async (index)=>{
-        console.log(index)
+        // console.log(index)
         await this.setState({
             displayIndex:index,
             functionViewDisplay:true,
@@ -349,7 +341,7 @@ class DashboardComponent extends React.Component {
                 }]
             }
         })
-        console.log(this.state.displayIndex)
+        // console.log(this.state.displayIndex)
         // this.loadChart(index)
     }
 //     loadChart =(index)=>{
@@ -423,7 +415,7 @@ class DashboardComponent extends React.Component {
 
         else{
             this.setState({functionViewDisplay:false})
-            await console.log(this.state.functionViewDisplay)
+            // await console.log(this.state.functionViewDisplay)
             const lists1=this.state.lists[index]
             await firebase
             .firestore()

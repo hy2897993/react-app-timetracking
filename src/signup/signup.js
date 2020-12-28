@@ -17,8 +17,7 @@ class SignupComponent extends React.Component {
     constructor(){
         super()
         this.state={
-            fname:null,
-            sname:null,
+            name:null,
             email:null,
             password:null,
             passwordC:null,
@@ -38,14 +37,11 @@ class SignupComponent extends React.Component {
                     Create Account
                 </Typography>
                 <form className={classes.form} onSubmit={(e) => this.submitSignup(e)}>
-                    <FormControl required margin='normal'>
-                        <InputLabel htmlFor='first-name-input'>First Name</InputLabel>
-                        <Input  id='first-name-input' onChange={(e)=>this.userTyping('fname', e)}></Input>
+                    <FormControl required fullWidth margin='normal'>
+                        <InputLabel htmlFor='name-input'>Enter Your Name</InputLabel>
+                        <Input  id='name-input' onChange={(e)=>this.userTyping('name', e)}></Input>
                     </FormControl>
-                    <FormControl  margin='normal'>
-                        <InputLabel htmlFor='family-name-input'>Family Name</InputLabel>
-                        <Input  id='family-name-input' onChange={(e)=>this.userTyping('sname', e)}></Input>
-                    </FormControl>
+
                     <FormControl required fullWidth margin='normal'>
                         <InputLabel htmlFor='signup-email-input'>Enter Your Email</InputLabel>
                         <Input autoComplete='Email' autoFocus id='signup-email-input' onChange={(e)=>this.userTyping('email', e)}></Input>
@@ -95,8 +91,7 @@ class SignupComponent extends React.Component {
         .then(authRes =>{
             const userObject = {
                 email: authRes.user.email,
-                firstName:this.state.fname,
-                familyName:this.state.sname
+                userName:this.state.name
             }
 
             firebase
@@ -118,12 +113,8 @@ class SignupComponent extends React.Component {
     }
     userTyping=(type,e)=>{
         switch (type) {
-            case 'sname':
-                this.setState({sname:e.target.value})
-                
-                break;
-            case 'fname':
-                this.setState({fname:e.target.value})
+            case 'name':
+                this.setState({name:e.target.value})
                 
                 break;
             case 'email':
